@@ -11,11 +11,11 @@ class GuestTest < MiniTest::Test
     @guest3 = Guest.new("Fruscainte", 560)
   end
 
-  def test_customer_name
+  def test_customer_name()
     assert_equal("Slash", @guest1.name)
   end
 
-  def test_customer_money
+  def test_customer_money()
     assert_equal(200, @guest2.money)
   end
 
