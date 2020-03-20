@@ -9,6 +9,7 @@ class RoomTest< MiniTest::Test
 
   def setup
     @room1 = Room.new("Rock Room", 4)
+    @room2 = Room.new("Small Roon", 1)
     @song = Songs.new("Stone Sour", "Tired")
     @song2 = Songs.new("Sum 41", "In Too Deep")
     @guest = Guest.new("Jon Snow", 10)
@@ -42,16 +43,19 @@ class RoomTest< MiniTest::Test
       assert_equal(1, @room1.guest.length)
   end
 
-  def guest_leaves()
-    @room1.guest_enter(@guest)
+  def test_guest_leaves()
     @room1.guest_enter(@guest)
     @room1.guest_leaves(@guest)
-    assert_equal(1, @room1.guest.length)
+    assert_equal(0, @room1.guest.length)
   end
 
-
-
-
+# i need to get away to check the room is full and if so reject guest
+# if guest.length >= rooms max
+  def test_full_room()
+   @room2.guest_enter(@guest)
+   @room2.guest_enter(@guest)
+   assert_equal(true, @room2.full_room)
+  end
 
 
 

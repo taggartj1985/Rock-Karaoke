@@ -9,4 +9,10 @@ rooms = capacity of room(maybe), add songs to room
 guests = money(extenstion) mvp just basically name to check in and out
 songs = just a list of songs (artist, song_title)
 
-need an array for some pda
+need an array for some pda *done*
+
+
+should i create a venue as a super class?
+
+by doing this i could make the guest venue_fee go through it
+could create a bar/food and keep track of rooms.
