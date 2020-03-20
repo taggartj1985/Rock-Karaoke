@@ -1,0 +1,12 @@
+
+
+create rooms, songs and guests
+check in guests to rooms/check out guests from rooms
+add songs to rooms
+
+venue* = maybe another class to get venue money.
+rooms = capacity of room(maybe), add songs to room
+guests = money(extenstion) mvp just basically name to check in and out
+songs = just a list of songs (artist, song_title)
+
+need an array for some pda
