@@ -19,4 +19,9 @@ class GuestTest < MiniTest::Test
     assert_equal(200, @guest2.money)
   end
 
+  def test_venue_fee()
+    @guest3.venue_fee(10)
+    assert_equal(550, @guest3.money)
+  end
+
 end
