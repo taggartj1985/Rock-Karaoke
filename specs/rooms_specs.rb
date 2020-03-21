@@ -57,6 +57,17 @@ class RoomTest< MiniTest::Test
    assert_equal(true, @room2.full_room)
   end
 
+  # Given : i had a customer who wants to come in
+  # when : check rooms are free
+  # then : if room is full reject, if space enter and take fee
+  # unsure how to write test
+
+  def test_can_check_room_is_full_and_enter()
+    @room1.guest_enter(@guest)
+    assert_equal(1, @room1.guest.length)
+    assert_equal(0, @guest.money)
+  end
+
 
 
 
