@@ -64,10 +64,12 @@ class RoomTest< MiniTest::Test
 
   def test_can_check_room_is_full_and_enter()
     @room1.guest_enter(@guest)
+    @guest.venue_fee(10)
     assert_equal(1, @room1.guest.length)
     assert_equal(0, @guest.money)
   end
 
+  
 
 
 
